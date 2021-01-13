@@ -7,7 +7,6 @@ function consultaCep() {
     success: function (response) {
       console.log(response);
       /* utilização de jquery com propriedades htlm */
-      $("#cepValue").html(response.cep);
       $("#logradouro").html(response.logradouro);
       $("#complemento").html(response.complemento);
       $("#bairro").html(response.bairro);
@@ -17,6 +16,7 @@ function consultaCep() {
       $("#gia").html(response.gia);
       $("#ddd").html(response.ddd);
       $("#siafi").html(response.siafi);
+      $("#titulo-cep").html("CEP "+ response.cep);
     },
   });
 }
