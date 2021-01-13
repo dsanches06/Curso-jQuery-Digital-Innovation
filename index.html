@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="/scripts/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="/scripts/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
     <title>Curso de JQuery e Ajax</title>
 </head>
 
 <body>
-    <input type="text" id="cep">
-    <button type="button" onclick="javascript:consultaCep()">Consultar</button>
-    <p id="cepValue"></p>
-    <p id="logradouro"></p>
-    <p id="complemento"></p>
-    <p id="bairro"></p>
-    <p id="localidade"></p>
-    <p id="uf"></p>
-    <p id="ibge"></p>
-    <p id="gia"></p>
-    <p id="ddd"></p>
-    <p id="siafi"></p>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white">Consulta CEP</a>
+            <div class="d-flex">
+                <input id="cep" class="form-control me-2" type="search" placeholder="CEP" aria-label="Search">
+                <button class="btn btn-outline-success" type="button"
+                    onclick="javascript:consultaCep();">Buscar</button>
+            </div>
+        </div>
+    </nav>
 </body>
 
 </html>

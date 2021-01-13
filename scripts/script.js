@@ -3,7 +3,7 @@ function consultaCep() {
   console.log("CEP: " + cep);
   $.ajax({
     url: "https://viacep.com.br/ws/" + cep + "/json/",
-    type: GET,
+    type: "GET",
     success: function (response) {
       console.log(response);
       /* utilização de jquery com propriedades htlm */
