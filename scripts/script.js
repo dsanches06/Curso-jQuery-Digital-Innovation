@@ -1,4 +1,5 @@
 function consultaCep() {
+    $(".barra-progresso").show();
   let cep = document.getElementById("cep").value;
   console.log("CEP: " + cep);
   $.ajax({
@@ -16,7 +17,16 @@ function consultaCep() {
       $("#gia").html(response.gia);
       $("#ddd").html(response.ddd);
       $("#siafi").html(response.siafi);
-      $("#titulo-cep").html("CEP "+ response.cep);
+      $("#titulo-cep").html("CEP " + response.cep);
+      /* mostrar o elemento que estava oculto */
+      $(".cep").show();
+      $(".barra-progresso").hide();
     },
   });
 }
+
+/* para ocultar elemento apartir da class cep  */
+$(function () {
+  $(".cep").hide();
+  $(".barra-progresso").hide();
+});
